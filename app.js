@@ -56,5 +56,8 @@ app.use(function(err, req, res, next) {
   });
 });
 
+app.listen(process.env.PORT || 3000, function(){
+  console.log("montyhacksii: port : %d in %s", this.address().port, app.settings.env);
+});
 
 module.exports = app;
