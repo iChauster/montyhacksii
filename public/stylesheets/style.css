@@ -5,7 +5,7 @@ body {
   height:100%;
   margin:0;
 }
-.container{
+#header{
 	width:100% !important;
 	height:100%;
 	display: table;
@@ -13,12 +13,16 @@ body {
 }
 #logorow{
 	padding:2em;
+	display: block !important;
 }
 .center{
 	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
 	font-family: "Rubik";
+}
+.text-center{
+	text-align: center;
 }
 .back{
 	text-align: center;
@@ -38,10 +42,67 @@ body {
 #sep{
 	margin:0;
 	padding:2em;
+	display: block !important;
 }
 .visible{
 	position: relative;
 	z-index: 1;
+}
+.vis{
+	z-index: 2;
+}
+#navBarMark{
+	justify-content:center;
+}
+#about{
+	background-color: #1D1D1D;
+	width:100%;
+	display: block !important;
+}
+#nav{
+	position: absolute;
+	background-color:rgba(16,16,16,0.3);
+	width:100%;
+}
+.container{
+	padding:20px !important;
+}
+.nav-link{
+	color:rgba(200,200,200,1.0) !important;
+	font-size:1.5em;
+	padding:10px !important;
+}
+.active{
+	color:rgba(255,255,255,1.0) !important;
+}
+.mod{
+	max-width: 50em;
+}
+.mod a{
+	text-decoration: none !important;
+	font-family: "LucidaGrande";
+	font-size:1.5em;
+	padding:0;
+	color:#1D1D1D;
+	transition:all 1s;
+}
+.mod a:hover{
+	color:#fff;
+	transition:all 1s;
+}
+.mod h3{
+	font-family: "LucidaGrande";
+	color:#F4EDF1;
+	font-size: 1.5em;
+	line-height: 2em;
+}
+#sponsors{
+	background-color:#00FFA2;
+	width:100%;
+	display: block !important;
+}
+.footer{
+	background-color:#1F2457;
 }
 h1{
 	color:#eaeaea !important;
@@ -55,6 +116,54 @@ h2{
 	font-style: italic;
 	margin:0 !important;
 	font-size: 1.5em !important;
+}
+h4{
+	color:rgba(250,250,250, 1.0) !important;
+	font-size: 1em !important;
+	font-family: "LucidaGrande" !important;
+	margin-bottom: 0 !important;
+}
+.title{
+	/* ABOUT: */
+	font-family: LucidaGrande !important;
+	font-size: 2em !important;
+	color: #F4EDF1 !important;
+}
+.col a{
+	padding:10px;
+	text-decoration: none !important;
+	color:white!important;
+}
+.align{
+	justify-content:center;
+	align-items:center;
+	text-align: center;
+}
+.p{
+	padding:10px;
+}
+.line{
+	max-width: 20em !important;
+	background-color: #F4EDF1;
+}
+.dark-b{
+	background-color: #1D1D1D ;
+}
+.dark-c{
+	color : #1D1D1D !important;
+}
+.icon{
+	font-size: 2em !important;
+	color:white !important;
+}
+#copy{
+	padding-left: 10px;
+	line-height: 2em;
+}
+.inline{
+	padding-top: 8px;
+	display: flex;
+	flex-direction:row;
 }
 a {
   color: #00B7FF;

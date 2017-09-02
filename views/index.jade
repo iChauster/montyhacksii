@@ -4,129 +4,69 @@ html(lang="en")
 		title MontyHacks
 		link(rel="stylesheet" href="stylesheets/style.css")
 		link(rel="stylesheet" href="stylesheets/bootstrap.min.css")
+		link(rel="stylesheet" href="stylesheets/fa/css/font-awesome.min.css")
 		meta(charset="utf-8")
 		link(href="https://fonts.googleapis.com/css?family=Inconsolata|Rubik" rel="stylesheet")
 		meta(name="viewport" content = "width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0")
+		script(src="javascripts/three.min.js")
+		script(src="javascripts/Projector.js")
+		script(src="javascripts/CanvasRenderer.js")
+		script(src="javascripts/jquery.min.js")
+		script(src="javascripts/bootstrap.min.js")
+		script(src="javascripts/ball.js")
 	body
-		.container#main
+		#main
+		.navbar.navbar-expand-lg.navbar-light.vis#nav
+			button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navBarMark" aria-controls="navBarMark" aria-expanded="false" aria-label="Toggle Navigation")
+				span.navbar-toggler-icon
+			.collapse.navbar-collapse#navBarMark
+				.navbar-nav
+					a.nav-item.nav-link.active(href="#") HOME
+						span.sr-only (current) 
+					a.nav-item.nav-link(href="#about") ABOUT
+					a.nav-item.nav-link(href="#sponsors") SPONSORS
+		.container#header
 			.center.visible
 				.row#logorow
 					img(src="images/hacks.png" style="height:8em;")
 				.back
-					h1 montyhacks
+					h1 montyhacks ii
 				.row#sep
 					.dark
-						h2 something new
+						h2 April 21st, 2018
 						h2 Montgomery High School
-	script(src="javascripts/three.min.js")
-	script(src="javascripts/Projector.js")
-	script(src="javascripts/CanvasRenderer.js")
-	script(src="javascripts/jquery.min.js")
-	script.
-		var SCREEN_WIDTH = window.innerWidth,
-			SCREEN_HEIGHT = window.innerHeight,
-			mouseX = 0, mouseY = 0,
-			windowHalfX = window.innerWidth / 2,
-			windowHalfY = window.innerHeight / 2,
-			SEPARATION = 200,
-			AMOUNTX = 10,
-			AMOUNTY = 10,
-			camera, scene, renderer;
-			init();
-			animate();
-			function init() {
-				var container, separation = 100, amountX = 50, amountY = 50,
-				particles, particle;
-				container = document.getElementById("main")
-				document.body.appendChild(container);
-				camera = new THREE.PerspectiveCamera( 75, SCREEN_WIDTH / SCREEN_HEIGHT, 1, 10000 );
-				camera.position.z = 1000;
-				scene = new THREE.Scene();
-				renderer = new THREE.CanvasRenderer();
-				renderer.setPixelRatio( window.devicePixelRatio );
-				renderer.setSize( SCREEN_WIDTH, SCREEN_HEIGHT );
-				container.appendChild( renderer.domElement );
-				$(renderer.domElement).css({
-				"display":"block",
-				"position":"absolute",
-				"top" : "0",
-				"left" : "0",
-				"background-color" : "#202220"
-				})
-				renderer.setClearColor (0x202220, 1);
-				// particles
-				var PI2 = Math.PI * 2;
-				var material = new THREE.SpriteCanvasMaterial( {
-					color: 0xffffff,
-					program: function ( context ) {
-						context.beginPath();
-						context.arc( 0, 0, 0.5, 0, PI2, true );
-						context.fill();
-					}
-				} );
-				for ( var i = 0; i < 1000; i ++ ) {
-					particle = new THREE.Sprite( material );
-					particle.position.x = Math.random() * 2 - 1;
-					particle.position.y = Math.random() * 2 - 1;
-					particle.position.z = Math.random() * 2 - 1;
-					particle.position.normalize();
-					particle.position.multiplyScalar( Math.random() * 10 + 450 );
-					particle.scale.multiplyScalar( 2 );
-					scene.add( particle );
-				}
-				// lines
-				for (var i = 0; i < 300; i++) {
-					var geometry = new THREE.Geometry();
-					var vertex = new THREE.Vector3( Math.random() * 2 - 1, Math.random() * 2 - 1, Math.random() * 2 - 1 );
-					vertex.normalize();
-					vertex.multiplyScalar( 450 );
-					geometry.vertices.push( vertex );
-					var vertex2 = vertex.clone();
-					vertex2.multiplyScalar( Math.random() * 0.3 + 1 );
-					geometry.vertices.push( vertex2 );
-					var line = new THREE.Line( geometry, new THREE.LineBasicMaterial( { color: 0xffffff, opacity: Math.random() } ) );
-					scene.add( line );
-				}
-				document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-				document.addEventListener( 'touchstart', onDocumentTouchStart, false );
-				document.addEventListener( 'touchmove', onDocumentTouchMove, false );
-				//
-				window.addEventListener( 'resize', onWindowResize, false );
-			}
-			function onWindowResize() {
-				windowHalfX = window.innerWidth / 2;
-				windowHalfY = window.innerHeight / 2;
-				camera.aspect = window.innerWidth / window.innerHeight;
-				camera.updateProjectionMatrix();
-				renderer.setSize( window.innerWidth, window.innerHeight );
-			}
-			//
-			function onDocumentMouseMove(event) {
-				mouseX = event.clientX - windowHalfX;
-				mouseY = event.clientY - windowHalfY;
-			}
-			function onDocumentTouchStart( event ) {
-				if ( event.touches.length > 1 ) {
-					event.preventDefault();
-					mouseX = event.touches[ 0 ].pageX - windowHalfX;
-					mouseY = event.touches[ 0 ].pageY - windowHalfY;
-				}
-			}
-			function onDocumentTouchMove( event ) {
-				if ( event.touches.length == 1 ) {
-					event.preventDefault();
-					mouseX = event.touches[ 0 ].pageX - windowHalfX;
-					mouseY = event.touches[ 0 ].pageY - windowHalfY;
-				}
-			}
-			//
-			function animate() {
-				requestAnimationFrame( animate );
-				render();
-			}
-			function render() {
-				camera.position.x += ( mouseX - camera.position.x ) * .05;
-				camera.position.y += ( - mouseY + 200 - camera.position.y ) * .05;
-				camera.lookAt( scene.position );
-				renderer.render( scene, camera );
-			}
+		.visible#about
+			.container
+				.text-center
+					h3.title ABOUT
+					hr.line
+					.row.align
+						.mod
+							h3 Montgomery High School's second 12-hour hackathon! Come to learn, and create cool projects with cutting-edge hardware, technology, and mentorship!
+		#sponsors
+			.container
+				.text-center
+					h3.title.dark-c SPONSORS
+					hr.line.dark-b
+					.row.align
+						.mod
+							h3.dark-c Want to sponsor us at MontyHacks II? Email us at 
+							a(href="mailto:montycompsci@gmail.com") montycompsci@gmail.com
+		.footer
+			.row.p
+				.col.align
+				.col.align
+					a(href="https://www.facebook.com/MontyHacks/")
+						i.icon.fa.fa-facebook(aria-hidden="true")
+					a(href="https://twitter.com/montyhacks")
+						i.icon.fa.fa-twitter(aria-hidden="true")
+					a(href="https://instagram.com/montyhacks")
+						i.icon.fa.fa-instagram(aria-hidden="true")
+					.inline.align
+						img(src="images/hacks.png" style="height:2em;") 
+						h4#copy &copy MontyHacks 2018	
+				.col.align
+								
+					
+
+		
