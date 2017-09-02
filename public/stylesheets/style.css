@@ -161,7 +161,7 @@ h4{
 	line-height: 2em;
 }
 .inline{
-	padding-top: 8px;
+	padding-top: 12px;
 	display: flex;
 	flex-direction:row;
 }
