@@ -8,12 +8,8 @@ html(lang="en")
 		meta(charset="utf-8")
 		link(href="https://fonts.googleapis.com/css?family=Inconsolata|Rubik" rel="stylesheet")
 		meta(name="viewport" content = "width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0")
-		script(src="javascripts/three.min.js")
-		script(src="javascripts/Projector.js")
-		script(src="javascripts/CanvasRenderer.js")
 		script(src="javascripts/jquery.min.js")
 		script(src="javascripts/bootstrap.min.js")
-		script(src="javascripts/ball.js")
 	body
 		#main
 		.navbar.navbar-expand-lg.navbar-light.vis#nav
@@ -25,16 +21,21 @@ html(lang="en")
 						span.sr-only (current) 
 					a.nav-item.nav-link(href="#about") ABOUT
 					a.nav-item.nav-link(href="#sponsors") SPONSORS
-		.container#header
-			.center.visible
-				.row#logorow
-					img(src="images/hacks.png" style="height:8em;")
+		#header
+			img#logo(src="images/montyhacks.png" style="height:30%;")
+			.side		
 				.back
-					h1 montyhacks ii
-				.row#sep
-					.dark
-						h2 April 21st, 2018
-						h2 Montgomery High School
+					h1 MontyHacks II
+					h2 Full Circle
+				hr.line-short
+				#dark
+					h2 Montgomery High School
+					h2 April 21 2018
+				.b
+					h1 Login
+				.b
+					h1 Register
+	//-
 		.visible#about
 			.container
 				.text-center
@@ -52,18 +53,18 @@ html(lang="en")
 						.mod
 							h3.dark-c Want to sponsor us at MontyHacks II? Email us at 
 							a(href="mailto:montycompsci@gmail.com") montycompsci@gmail.com
-		.footer
-			.row.p
-				.col.align
-					a(href="https://www.facebook.com/MontyHacks/")
-						i.icon.fa.fa-facebook(aria-hidden="true")
-					a(href="https://twitter.com/montyhacks")
-						i.icon.fa.fa-twitter(aria-hidden="true")
-					a(href="https://instagram.com/montyhacks")
-						i.icon.fa.fa-instagram(aria-hidden="true")
-					.inline.align
-						img(src="images/hacks.png" style="height:2em;") 
-						h4#copy &copy MontyHacks 2018	
+	.footer
+		.row.p
+			.col.align
+				a(href="https://www.facebook.com/MontyHacks/")
+					i.icon.fa.fa-facebook(aria-hidden="true")
+				a(href="https://twitter.com/montyhacks")
+					i.icon.fa.fa-twitter(aria-hidden="true")
+				a(href="https://instagram.com/montyhacks")
+					i.icon.fa.fa-instagram(aria-hidden="true")
+				.inline.align
+					img(src="images/hacks.png" style="height:2em;") 
+					h4#copy &copy MontyHacks 2018	
 								
 					
 

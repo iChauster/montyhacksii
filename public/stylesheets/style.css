@@ -4,40 +4,76 @@ body {
   width:100%;
   height:100%;
   margin:0;
+  background:#191919;
 }
 #header{
 	width:100% !important;
 	height:100%;
-	display: table;
-	background-color: #202220;
+	background: url("../images/Artboard.png") no-repeat center center scroll;
+	background-size: cover;
 }
-#logorow{
-	padding:2em;
-	display: block !important;
+#logo{
+	position:absolute;
+	left:20%;
+	top:28%;
 }
-.center{
-	display: table-cell;
-	vertical-align: middle;
+.side{
+	position: absolute;
+	right:10%;
 	text-align: center;
 	font-family: "Rubik";
+	bottom:10%;
 }
 .text-center{
 	text-align: center;
 }
 .back{
-	text-align: center;
+	text-align: right;
 	display: inline-block;
-	padding:10px;
-	background:	#1F2457;
-	line-height: 1px;
+
 }
-.dark{
-	background:#545454;
-	background-color:rgba(84,84,84,0.7);
+.back h1{
+	/* MontyHacks II Full C: */
+	font-family: STHeitiTC-Medium;
+	color: #E8E8E8;
+	letter-spacing: 0;
+	font-size:3rem !important;
+
+}
+.back h2{
+	font-family: STHeitiTC-Light !important;
+	font-style: normal !important;
+	color: #E8E8E8 !important;
+	letter-spacing:0 !important;
+	font-size:3rem !important;
+
+}
+#dark h2{
+	text-align: right;
+	font-family: STHeitiSC-Light !important;
+	font-style:normal !important;
+	font-size: 1.5rem !important;
+	color: #E8E8E8 !important;
+	letter-spacing: 0 !important;
+}
+.b{
+		/* Rectangle 5: */
+	background: #58E18C;
+	border-radius: 40px;
+	min-height: 40px;
+	display: table;
+	margin:10px;
+	width:100%;
+}
+.b h1{
+	font-family: Avenir-Heavy !important;
+	font-size: 1.25rem !important;
+	color: #FEFEFE !important;
+	letter-spacing: 0 !important;
+	font-style: normal !important;
+	display:table-cell;
+	vertical-align: middle;
 	text-align: center;
-	padding:10px;
-	line-height: 1px;
-	display: inline-block;
 }
 #sep{
 	margin:0;
@@ -63,9 +99,6 @@ body {
 	position: absolute;
 	background-color:rgba(16,16,16,0.3);
 	width:100%;
-}
-.container{
-	padding:20px !important;
 }
 .nav-link{
 	color:rgba(200,200,200,1.0) !important;
@@ -145,6 +178,11 @@ h4{
 .line{
 	max-width: 20em !important;
 	background-color: #F4EDF1;
+}
+.line-short{
+	max-width: 2em !important;
+	background-color: #F4EDF1;
+	margin-right: 0;
 }
 .dark-b{
 	background-color: #1D1D1D ;
