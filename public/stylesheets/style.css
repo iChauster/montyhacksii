@@ -39,14 +39,14 @@ body {
 }
 .back h1{
 	/* MontyHacks II Full C: */
-	font-family: STHeitiTC-Medium, "LucidaGrande";
+	font-family: STHeitiTC-Medium, "Century Gothic";
 	color: #E8E8E8;
 	letter-spacing: 0;
 	font-size:3rem !important;
 
 }
 .back h2{
-	font-family: STHeitiTC-Light,"LucidaGrande" !important;
+	font-family: STHeitiTC-Light,"Century Gothic" !important;
 	font-style: normal !important;
 	color: #E8E8E8 !important;
 	letter-spacing:0 !important;
@@ -55,7 +55,7 @@ body {
 }
 #dark h2{
 	text-align: right;
-	font-family: STHeitiSC-Light, "LucidaGrande" !important;
+	font-family: STHeitiSC-Light, "Century Gothic" !important;
 	font-style:normal !important;
 	font-size: 1.5rem !important;
 	color: #E8E8E8 !important;
@@ -71,7 +71,7 @@ body {
 	width:100%;
 }
 .b h1{
-	font-family: Avenir-Heavy, "LucidaGrande" !important;
+	font-family: Avenir-Heavy, "Century Gothic" !important;
 	font-size: 1.25rem !important;
 	color: #FEFEFE !important;
 	letter-spacing: 0 !important;
