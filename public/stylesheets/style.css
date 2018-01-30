@@ -1,4 +1,4 @@
-html,
+ html,
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   width:100%;
@@ -125,16 +125,16 @@ body {
 	font-family: "LucidaGrande", Geneva, Verdana, sans-serif;
 	font-size:1.5em;
 	padding:0;
-	color:#FFF;
+	color:#191919;
 	transition:all 1s;
 }
 .mod a:hover{
-	color:#000;
+	color:#FFA844;
 	transition:all 1s;
 }
 .mod h3{
 	font-family: "LucidaGrande",  fGeneva, Verdana, sans-serif;
-	color:#FFF;
+	color:#191919;
 	font-size: 1.5em;
 	line-height: 2em;
 }
@@ -145,7 +145,7 @@ body {
 	line-height: 2em;
 }
 #sponsors{
-	background-color:#69B98F;
+	background-color:#F9F7F6;
 	width:100%;
 	display: block !important;
 	padding:10px;
@@ -177,6 +177,7 @@ h4{
 	/* ABOUT: */
 	font-family: LucidaGrande, Geneva, Verdana, sans-serif !important;
 	font-size: 2em !important;
+	color:#191919 !important;
 }
 .col a{
 	padding:10px;
@@ -261,20 +262,20 @@ a {
 	margin:0;
 }
 #schedule{
-	height:50%;
+	height:30%;
 	width:100%;
-	background:#F9F7F6;
+	background:#69B98F;
 	color:#191919 !important;
 }
 .scheduleContainer{
 	display: table;
-	height:85%;
+	height:60%;
 	width:100%;
 }
 #scheduleTitle{
 	margin:0px !important;
 	padding-top:10px;
-	color:#191919 !important;
+	color:#FEFEFE !important;
 	text-align: center;
 }
 #cent{
@@ -282,7 +283,7 @@ a {
 	vertical-align: middle;
 }
 #cent h2{
-	color: #191919 !important;
+	color: #FEFEFE !important;
 }
 .split{
 	-webkit-border-radius: 28px;
