@@ -37,7 +37,7 @@ function isRegistered(em,callback){
 		var responses = str.responses
 		for(i in str.responses){
 			var a = str.responses[i].answers;
-			var email = a["email_26818225"];
+			var email = a["email_ZnFSgexKILay"];
 			console.log(email)
 			if(em == email){
 				console.log(em,email)
