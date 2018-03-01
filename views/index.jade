@@ -10,6 +10,7 @@ html(lang="en")
 		meta(name="viewport" content = "width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0")
 		script(src="javascripts/jquery.min.js")
 		script(src="javascripts/bootstrap.min.js")
+		script(src="javascripts/buttons.js")
 	body
 		#main
 		.navbar.navbar-expand-lg.navbar-light.vis#nav
@@ -35,9 +36,7 @@ html(lang="en")
 					h2 Montgomery High School
 					h2 April 21 2018
 				.buttons
-					.b
-						h1 Login
-					.b
+					a(href="/register").b#register
 						h1 Register
 		.visible#about
 			.container

@@ -6,6 +6,9 @@ body {
   margin:0;
   background:#191919;
 }
+a{
+	text-decoration: none !important;
+}
 #header{
 	width:100% !important;
 	height:100%;
@@ -69,6 +72,9 @@ body {
 	display: table;
 	margin:10px;
 	width:100%;
+}
+.b:hover{
+	cursor: pointer;
 }
 .b h1{
 	font-family: Avenir-Heavy, "Century Gothic" !important;
