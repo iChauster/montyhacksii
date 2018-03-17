@@ -268,10 +268,11 @@ a {
 	margin:0;
 }
 #schedule{
-	height:30%;
 	width:100%;
 	background:#69B98F;
 	color:#191919 !important;
+	padding:20px;
+
 }
 .scheduleContainer{
 	display: table;
@@ -283,6 +284,12 @@ a {
 	padding-top:10px;
 	color:#FEFEFE !important;
 	text-align: center;
+}
+#schedule h2{
+	padding-top:10px;
+	padding-bottom:10px;
+	font-style: normal;
+
 }
 #cent{
 	display:table-cell;
