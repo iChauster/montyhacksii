@@ -252,6 +252,16 @@ a {
 	font-size: 18px;
 	line-height: 1.25em;
 }
+#faq a{
+	text-decoration: none!;
+	color:white;
+	transition:all 1s;
+
+}
+#faq a:hover{
+	color:#191919;
+	transition:all 1s;
+}
 .faqTitle {
 	margin:0px !important;
 	padding-top:10px;
