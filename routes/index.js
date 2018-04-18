@@ -1,5 +1,6 @@
 var express = require('express');
 var request = require('request');
+var fs = require('fs');
 var app = express.Router();
 
 /* GET home page. */
@@ -22,6 +23,14 @@ app.get('/auth/:email', function (req,res,next){
 			res.redirect('https://ichauster.typeform.com/to/mCEJwM')
 		}
 	})
+});
+
+app.get('/forms', function (req,res,next){
+	console.log("reached");
+	fs.readFile("./public/waiver.pdf", function (err,data){
+     res.contentType("application/pdf");
+     res.send(data);
+  });
 });
 
 function isRegistered(em,callback){
