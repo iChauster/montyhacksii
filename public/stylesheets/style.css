@@ -151,7 +151,7 @@ a{
 	line-height: 2em;
 }
 #sponsors{
-	background-color:#F9F7F6;
+	background-color:#FBFFFD;
 	width:100%;
 	display: block !important;
 	padding:10px;
@@ -189,6 +189,12 @@ h4{
 	padding:10px;
 	text-decoration: none !important;
 	color:white!important;
+}
+#sponsors .align{
+	justify-content:center;
+	align-items:center;
+	text-align: center;
+	min-height: 150px;
 }
 .align{
 	justify-content:center;
